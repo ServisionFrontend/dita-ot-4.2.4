@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.example.pdf.custom">
+    <require plugin="org.dita.pdf2"/>
+    <feature extension="dita.conductor.transtype.check" value="pdf-custom"/>
+    <feature extension="dita.transtype.print" value="pdf-custom"/>
+    <feature extension="ant.import" file="integrator.xml"/>
+    <!-- 添加自定义 XSL 引用 -->
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom.xsl"/>
+</plugin>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="solar-system">
+    <title>太阳系简介</title>
+    <shortdesc>太阳系是由太阳及其引力束缚的天体组成的系统。</shortdesc>
+    <body>
+        <p>太阳系由太阳以及所有受其引力影响的天体组成，包括行星、矮行星、卫星、小行星、彗星和尘埃等。</p>
+        <p>主要的行星有：</p>
+        <ul>
+            <li>水星</li>
+            <li>金星</li>
+            <li>地球</li>
+            <li>火星</li>
+            <li>木星</li>
+            <li>土星</li>
+            <li>天王星</li>
+            <li>海王星</li>
+        </ul>
+        <p>这些行星按照距离太阳由近及远排列，地球是其中唯一已知存在生命的行星。</p>
+    </body>
+</topic>

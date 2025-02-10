@@ -15,7 +15,7 @@ See the accompanying LICENSE file for applicable license.
   <xsl:import href="plugin:org.dita.pdf2.axf:xsl/fo/index_axf.xsl"/>
   <xsl:import href="plugin:org.dita.pdf2.axf:xsl/fo/topic_axf.xsl"/>
   
-  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:org.lwdita:xsl/linebreak2fo.xsl"/>
+  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:com.example.pdf.custom:cfg/fo/xsl/custom.xsl"/><xsl:import href="plugin:org.lwdita:xsl/linebreak2fo.xsl"/>
 
   <xsl:import href="cfg:fo/attrs/custom.xsl"/>
   <xsl:import href="cfg:fo/xsl/custom.xsl"/>
