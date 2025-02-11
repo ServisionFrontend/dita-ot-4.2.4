@@ -3,5 +3,4 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="2.0">
     <!-- 导入自定义属性 -->
-    <xsl:import href="../attrs/custom.xsl"/>
 </xsl:stylesheet>

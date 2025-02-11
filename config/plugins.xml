@@ -134,8 +134,10 @@
     <feature extension="dita.conductor.transtype.check" value="pdf-custom"/>
     <feature extension="dita.transtype.print" value="pdf-custom"/>
     <feature extension="ant.import" file="integrator.xml"/>
-    <!-- 添加自定义 XSL 引用 -->
+    <!-- 先引入自定义 XSL -->
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom.xsl"/>
+    <!-- 再引入静态内容 XSL -->
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/static-content.xsl"/>
 </plugin><plugin id="org.dita.html5" version="4.2.4" xml:base="../plugins/org.dita.html5/plugin.xml">
   <!-- extension points -->
   <extension-point id="dita.xsl.html5" name="HTML5 XSLT import"/>
