@@ -299,6 +299,9 @@ with those set forth herein.
       <param name="variableFiles.url" expression="${variable.file.url}" if:set="variable.file.exists"/>
       <param name="defaultLanguage" expression="${default.language}"/>
       
+    <param name="plugin.dir.pdf2-nio-user-manual" expression="${dita.plugin.sv.dita.pdf2-nio-user-manual.dir}"/>
+    <param name="artwork.dir" expression="${dita.plugin.sv.dita.pdf2-nio-user-manual.dir}/cfg/fo/artwork"/>
+
       <xmlcatalog refid="xml.catalog"/>
     </xslt>
     </pipeline>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+    <param name="plugin.dir.pdf2-nio-user-manual" 
+         expression="${dita.plugin.sv.dita.pdf2-nio-user-manual.dir}"/>
+    <param name="artwork.dir" 
+         expression="${dita.plugin.sv.dita.pdf2-nio-user-manual.dir}/cfg/fo/artwork"/>
+</params>
