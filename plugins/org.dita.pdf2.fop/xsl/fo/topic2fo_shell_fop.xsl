@@ -15,7 +15,7 @@ See the accompanying LICENSE file for applicable license.
   <xsl:import href="plugin:org.dita.pdf2.fop:xsl/fo/index_fop.xsl"/>
   <xsl:import href="plugin:org.dita.pdf2.fop:xsl/fo/topic_fop.xsl"/>
 
-  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:org.lwdita:xsl/linebreak2fo.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/attrs/custom.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/custom.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/static-content.xsl"/>
+  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:org.lwdita:xsl/linebreak2fo.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/watermark.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/attrs/custom-font-set.xsl"/>
 
   <xsl:import href="cfg:fo/attrs/custom.xsl"/>
   <xsl:import href="cfg:fo/xsl/custom.xsl"/>
