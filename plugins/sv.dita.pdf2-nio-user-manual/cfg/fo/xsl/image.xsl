@@ -13,10 +13,14 @@
     <xsl:param name="OUTPUTDIR"/>
     <xsl:param name="BASEDIR"/>
     <xsl:param name="TEMPDIR"/>
+    <xsl:param name="artwork.dir"/>
     <!-- 添加key定义 -->
     <xsl:key name="jobFile" match="file" use="@uri"/>
     <!-- 重写图片处理模板 -->
     <xsl:template match="*[contains(@class,' topic/image ')]">
+        <xsl:message>
+            <xsl:text>Debug - Image: </xsl:text>
+        </xsl:message>
         <fo:block xsl:use-attribute-sets="image__block" 
                   border="2pt solid red" 
                   padding="2pt"
