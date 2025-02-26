@@ -39,7 +39,7 @@ See the accompanying LICENSE file for applicable license.
             <xsl:value-of select="concat('file:/',$artwork.dir, '/watermark.png')"/>
         </xsl:message>
         <fo:static-content flow-name="odd-body-header">
-            <fo:block-container absolute-position="absolute" top="0cm" left="0cm" width="21cm" height="29.7cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}" border="2pt solid red" z-index="999" background-color="yellow">
+            <fo:block-container absolute-position="absolute" top="0cm" left="0cm" width="25cm" height="29.7cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}"  z-index="999" >
                 <fo:block/>
             </fo:block-container>
             <fo:block xsl:use-attribute-sets="__body__odd__header">

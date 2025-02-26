@@ -22,7 +22,6 @@
             <xsl:text>Debug - Image: </xsl:text>
         </xsl:message>
         <fo:block xsl:use-attribute-sets="image__block" 
-                  border="2pt solid red" 
                   padding="2pt"
                   text-align="center">
             <fo:external-graphic src="url({key('jobFile', @href, $job)/@src})"
