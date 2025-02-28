@@ -50,6 +50,12 @@ See the accompanying LICENSE file for applicable license.
         <aliases>
             <alias name="AlibabaPuHuiTi">AlibabaPuHuiTi</alias>
         </aliases>
+        <aliases>
+            <alias name="DINPro">AlibabaPuHuiTi</alias>
+        </aliases>
+        <aliases>
+            <alias name="DINPro-Regular">AlibabaPuHuiTi</alias>
+        </aliases>
         <logical-font name="Sans">
             <physical-font char-set="default">
                 <font-face>Helvetica, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
@@ -123,6 +129,23 @@ See the accompanying LICENSE file for applicable license.
             </physical-font>
         </logical-font>
         <logical-font name="AlibabaPuHuiTi">
+            <physical-font char-set="default">
+                <font-face>AlibabaPuHuiTi</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>AlibabaPuHuiTi</font-face>
+            </physical-font>
+        </logical-font>
+        <!-- DINPro Font -->
+        <logical-font name="DINPro">
+            <physical-font char-set="default">
+                <font-face>AlibabaPuHuiTi</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>AlibabaPuHuiTi</font-face>
+            </physical-font>
+        </logical-font>
+        <logical-font name="DINPro-Regular">
             <physical-font char-set="default">
                 <font-face>AlibabaPuHuiTi</font-face>
             </physical-font>

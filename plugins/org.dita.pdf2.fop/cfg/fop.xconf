@@ -73,6 +73,10 @@ the location of this file.
                 <font embed-url="font/AlibabaPuHuiTi-2-35-Thin.ttf">
                     <font-triplet name="AlibabaPuHuiTi" style="normal" weight="400"/>
                     <font-triplet name="AlibabaPuHuiTi" style="normal" weight="700"/>
+                    <font-triplet name="DINPro" style="normal" weight="400"/>
+                    <font-triplet name="DINPro" style="normal" weight="700"/>
+                    <font-triplet name="DINPro-Regular" style="normal" weight="400"/>
+                    <font-triplet name="DINPro-Regular" style="normal" weight="700"/>
                 </font>
                 <!-- auto-detect fonts -->
                 <auto-detect/>
