@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <!-- 
 Copyright © 2004-2006 by Idiom Technologies, Inc. All rights reserved. 
 IDIOM is a registered trademark of Idiom Technologies, Inc. and WORLDSERVER
@@ -30,101 +29,106 @@ with those set forth herein.
 This file is part of the DITA Open Toolkit project.
 See the accompanying LICENSE file for applicable license.
 -->
-
 <font-mappings>
-  <font-table>
-    
-    <!-- Backwards compatibility aliases -->
-    <aliases>
-      <alias name="serif">Serif</alias>
-    </aliases>
-    <aliases>
-      <alias name="sans-serif">Sans</alias>
-    </aliases>
-    <aliases>
-      <alias name="monospace">Monospaced</alias>
-    </aliases>
-    <aliases>
-      <alias name="Helvetica">Normal</alias>
-    </aliases>
-    <aliases>
-      <alias name="Courier">Monospaced</alias>
-    </aliases>
-    
-    <logical-font name="Sans">
-      <physical-font char-set="default">
-        <font-face>Helvetica, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
-      </physical-font>
-      <physical-font char-set="Simplified Chinese">
-        <font-face>AdobeSongStd-Light, Arial Unicode MS, Batang, SimSun</font-face>
-      </physical-font>
-      <physical-font char-set="Japanese">
-        <font-face>MS-Gothic, Hiragino Kaku Gothic Pro, HiraKakuProN-W3, YuGothic, Arial Unicode MS</font-face>
-      </physical-font>
-      <physical-font char-set="Korean">
-        <font-face>AdobeMyungjoStd-Medium, Arial Unicode MS, Batang</font-face>
-      </physical-font>      
-      <physical-font char-set="Symbols">
-        <font-face>ZapfDingbats</font-face>
-      </physical-font>
-      <physical-font char-set="SubmenuSymbol">
-        <font-face>ZapfDingbats</font-face>
-      </physical-font>
-      <physical-font char-set="SymbolsSuperscript">
-        <font-face>Helvetica, Arial Unicode MS</font-face>
-        <baseline-shift>20%</baseline-shift>
-        <override-size>smaller</override-size>
-      </physical-font>
-    </logical-font>
-
-    <logical-font name="Serif">
-      <physical-font char-set="default">
-        <font-face>Times New Roman, Times, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
-      </physical-font>
-      <physical-font char-set="Simplified Chinese">
-        <font-face>AdobeSongStd-Light, Arial Unicode MS, Batang, SimSun</font-face>
-      </physical-font>
-      <physical-font char-set="Japanese">
-        <font-face>MS-Mincho, Hiragino Mincho Pro, HiraMinProN-W3, YuMincho, Arial Unicode MS</font-face>
-      </physical-font>
-      <physical-font char-set="Korean">
-        <font-face>AdobeMyungjoStd-Medium, Arial Unicode MS, Batang</font-face>
-      </physical-font>
-      <physical-font char-set="Symbols">
-        <font-face>ZapfDingbats</font-face>
-      </physical-font>
-      <physical-font char-set="SubmenuSymbol">
-        <font-face>ZapfDingbats</font-face>
-      </physical-font>
-      <physical-font char-set="SymbolsSuperscript">
-        <font-face>Times New Roman, Times, Arial Unicode MS, Tahoma, Batang</font-face>
-        <baseline-shift>20%</baseline-shift>
-        <override-size>smaller</override-size>
-      </physical-font>
-    </logical-font>
-
-    <logical-font name="Monospaced">
-      <physical-font char-set="default">
-        <font-face>Courier New, Courier, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
-      </physical-font>
-      <physical-font char-set="Simplified Chinese">
-        <font-face>AdobeSongStd-Light, Arial Unicode MS, Batang, SimSun</font-face>
-      </physical-font>
-      <physical-font char-set="Japanese">
-        <font-face>MS-Gothic, Hiragino Kaku Gothic Pro, HiraKakuProN-W3, YuGothic, Arial Unicode MS</font-face>
-      </physical-font>
-      <physical-font char-set="Korean">
-        <font-face>AdobeMyungjoStd-Medium, Arial Unicode MS, Batang</font-face>
-      </physical-font>
-      <physical-font char-set="Symbols">
-        <font-face>ZapfDingbats</font-face>
-      </physical-font>
-      <physical-font char-set="SymbolsSuperscript">
-        <font-face>Courier New, Courier, Arial Unicode MS, Tahoma, Batang</font-face>
-        <baseline-shift>20%</baseline-shift>
-        <override-size>smaller</override-size>
-      </physical-font>
-    </logical-font>
-  </font-table>
-  
+    <font-table>
+        <!-- Backwards compatibility aliases -->
+        <aliases>
+            <alias name="serif">Serif</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-serif">Sans</alias>
+        </aliases>
+        <aliases>
+            <alias name="monospace">Monospaced</alias>
+        </aliases>
+        <aliases>
+            <alias name="Helvetica">Normal</alias>
+        </aliases>
+        <aliases>
+            <alias name="Courier">Monospaced</alias>
+        </aliases>
+        <aliases>
+            <alias name="AlibabaPuHuiTi">AlibabaPuHuiTi</alias>
+        </aliases>
+        <logical-font name="Sans">
+            <physical-font char-set="default">
+                <font-face>Helvetica, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>AdobeSongStd-Light, Arial Unicode MS, Batang, SimSun</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>MS-Gothic, Hiragino Kaku Gothic Pro, HiraKakuProN-W3, YuGothic, Arial Unicode MS</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>AdobeMyungjoStd-Medium, Arial Unicode MS, Batang</font-face>
+            </physical-font>
+            <physical-font char-set="Symbols">
+                <font-face>ZapfDingbats</font-face>
+            </physical-font>
+            <physical-font char-set="SubmenuSymbol">
+                <font-face>ZapfDingbats</font-face>
+            </physical-font>
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>Helvetica, Arial Unicode MS</font-face>
+                <baseline-shift>20%</baseline-shift>
+                <override-size>smaller</override-size>
+            </physical-font>
+        </logical-font>
+        <logical-font name="Serif">
+            <physical-font char-set="default">
+                <font-face>Times New Roman, Times, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>AdobeSongStd-Light, Arial Unicode MS, Batang, SimSun</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>MS-Mincho, Hiragino Mincho Pro, HiraMinProN-W3, YuMincho, Arial Unicode MS</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>AdobeMyungjoStd-Medium, Arial Unicode MS, Batang</font-face>
+            </physical-font>
+            <physical-font char-set="Symbols">
+                <font-face>ZapfDingbats</font-face>
+            </physical-font>
+            <physical-font char-set="SubmenuSymbol">
+                <font-face>ZapfDingbats</font-face>
+            </physical-font>
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>Times New Roman, Times, Arial Unicode MS, Tahoma, Batang</font-face>
+                <baseline-shift>20%</baseline-shift>
+                <override-size>smaller</override-size>
+            </physical-font>
+        </logical-font>
+        <logical-font name="Monospaced">
+            <physical-font char-set="default">
+                <font-face>Courier New, Courier, Arial Unicode MS, Tahoma, Batang, SimSun</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>AdobeSongStd-Light, Arial Unicode MS, Batang, SimSun</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>MS-Gothic, Hiragino Kaku Gothic Pro, HiraKakuProN-W3, YuGothic, Arial Unicode MS</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>AdobeMyungjoStd-Medium, Arial Unicode MS, Batang</font-face>
+            </physical-font>
+            <physical-font char-set="Symbols">
+                <font-face>ZapfDingbats</font-face>
+            </physical-font>
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>Courier New, Courier, Arial Unicode MS, Tahoma, Batang</font-face>
+                <baseline-shift>20%</baseline-shift>
+                <override-size>smaller</override-size>
+            </physical-font>
+        </logical-font>
+        <logical-font name="AlibabaPuHuiTi">
+            <physical-font char-set="default">
+                <font-face>AlibabaPuHuiTi</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>AlibabaPuHuiTi</font-face>
+            </physical-font>
+        </logical-font>
+    </font-table>
 </font-mappings>
