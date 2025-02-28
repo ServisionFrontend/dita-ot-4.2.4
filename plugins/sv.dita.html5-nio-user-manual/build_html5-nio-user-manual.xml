@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="html5-nio-user-manual">
+    <!-- Extend HTML5 transformation -->
+    <target name="dita2html5-nio-user-manual"
+            depends="dita2html5-nio-user-manual.init,
+                     dita2html5"/>
+    <target name="dita2html5-nio-user-manual.init">
+        <property name="args.cssroot" 
+                  location="${dita.plugin.sv.dita.html5-nio-user-manual.dir}/css"/>
+        <property name="args.css" value="custom.css"/>
+        <property name="args.copycss" value="yes"/>
+        <property name="args.csspath" value="css"/>
+    </target>
+</project>

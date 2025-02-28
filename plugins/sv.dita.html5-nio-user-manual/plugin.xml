@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="sv.dita.html5-nio-user-manual">
+    <require plugin="org.dita.html5"/>
+    <feature extension="dita.xsl.html5" file="xsl/custom.xsl"/>
+    <feature extension="ant.import" file="build_html5-nio-user-manual.xml"/>
+    <transtype name="html5-nio-user-manual" extends="html5" desc="NIO User Manual HTML5">
+        <param name="args.cssroot" type="string" expression="${dita.plugin.sv.dita.html5-nio-user-manual.dir}/css"/>
+        <param name="args.css" type="string" expression="custom.css"/>
+        <param name="args.copycss" type="string" expression="yes"/>
+        <param name="args.csspath" type="string" expression="css"/>
+    </transtype>
+</plugin>

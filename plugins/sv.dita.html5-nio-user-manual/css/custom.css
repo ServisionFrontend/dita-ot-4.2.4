@@ -1,0 +1,147 @@
+/* Custom styles for NIO User Manual */
+
+
+/* 自定义主题颜色 */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #ffffff;
+    --text-color: #333333;
+}
+
+
+/* 基础样式 */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* 标题样式 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.2em;
+}
+
+
+/* 链接样式 */
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* 表格样式 */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+
+/* 代码块样式 */
+
+pre,
+code {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 1em;
+    font-family: "Consolas", monospace;
+}
+
+
+/* 注意和警告样式 */
+
+.note {
+    background-color: #e7f5ff;
+    border-left: 4px solid var(--primary-color);
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+
+/* 导航样式 */
+
+.nav {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 2em;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin-bottom: 0.5em;
+}
+
+
+/* 响应式设计 */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
