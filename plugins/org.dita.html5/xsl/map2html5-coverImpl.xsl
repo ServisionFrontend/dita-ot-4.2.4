@@ -9,6 +9,6 @@ See the accompanying LICENSE file for applicable license.
   <xsl:import href="plugin:org.dita.html5:xsl/dita2html5Impl.xsl"/>
   <xsl:import href="plugin:org.dita.html5:xsl/cover.xsl"/>
   
-  
+  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:sv.dita.html5-nio-user-manual:xsl/cover.xsl"/>
 
 </xsl:stylesheet>

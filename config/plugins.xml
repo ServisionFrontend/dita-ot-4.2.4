@@ -682,12 +682,14 @@ public IDs and system IDs for any DTD modules included in this plugin. -->
     <require plugin="org.dita.html5"/>
     <feature extension="dita.xsl.html5" file="xsl/custom.xsl"/>
     <feature extension="ant.import" file="build_html5-nio-user-manual.xml"/>
+    <feature extension="dita.xsl.html5.cover" file="xsl/cover.xsl"/>
     <transtype desc="NIO User Manual HTML5" extends="html5" name="html5-nio-user-manual">
         <param expression="${dita.plugin.sv.dita.html5-nio-user-manual.dir}/css" name="args.cssroot" type="string"/>
         <param expression="custom.css" name="args.css" type="string"/>
         <param expression="yes" name="args.copycss" type="string"/>
         <param expression="css" name="args.csspath" type="string"/>
     </transtype>
+    <template file="xsl/map2html5-coverImpl_template.xsl"/>
 </plugin><plugin id="org.dita.eclipsehelp" version="3.4.0" xml:base="../plugins/org.dita.eclipsehelp/plugin.xml">
   <!-- extension points -->
   <extension-point id="dita.xsl.eclipse.plugin" name="Eclipse plugin XSLT import"/>

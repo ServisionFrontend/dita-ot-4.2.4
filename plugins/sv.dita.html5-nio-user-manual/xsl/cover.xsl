@@ -15,6 +15,17 @@ See the accompanying LICENSE file for applicable license.
     <!-- optional @class attribute for TOC <body> element
        (value comes from args.html5.toc.class parameter) -->
     <xsl:param name="OUTPUTCLASS" as="xs:string?"/>
+    <xsl:template name="fix-href">
+        <xsl:param name="href"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($href, '../')">
+                <xsl:value-of select="substring-after($href, '../')"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$href"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     <xsl:template match="*[contains(@class, ' map/map ')]" mode="toc">
         <xsl:param name="pathFromMaplist"/>
         <xsl:if test="descendant::*[contains(@class, ' map/topicref ')]
@@ -53,9 +64,14 @@ See the accompanying LICENSE file for applicable license.
                                             <xsl:if test="not(@scope = 'external')">
                                                 <xsl:value-of select="$pathFromMaplist"/>
                                             </xsl:if>
-                                            <xsl:call-template name="replace-extension">
-                                                <xsl:with-param name="filename" select="@copy-to"/>
-                                                <xsl:with-param name="extension" select="$OUTEXT"/>
+                                            <xsl:variable name="result">
+                                                <xsl:call-template name="replace-extension">
+                                                    <xsl:with-param name="filename" select="@copy-to"/>
+                                                    <xsl:with-param name="extension" select="$OUTEXT"/>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:call-template name="fix-href">
+                                                <xsl:with-param name="href" select="$result"/>
                                             </xsl:call-template>
                                             <xsl:if test="not(contains(@copy-to, '#')) and contains(@href, '#')">
                                                 <xsl:value-of select="concat('#', substring-after(@href, '#'))"/>
@@ -65,9 +81,14 @@ See the accompanying LICENSE file for applicable license.
                                             <xsl:if test="not(@scope = 'external')">
                                                 <xsl:value-of select="$pathFromMaplist"/>
                                             </xsl:if>
-                                            <xsl:call-template name="replace-extension">
-                                                <xsl:with-param name="filename" select="@href"/>
-                                                <xsl:with-param name="extension" select="$OUTEXT"/>
+                                            <xsl:variable name="result">
+                                                <xsl:call-template name="replace-extension">
+                                                    <xsl:with-param name="filename" select="@href"/>
+                                                    <xsl:with-param name="extension" select="$OUTEXT"/>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:call-template name="fix-href">
+                                                <xsl:with-param name="href" select="$result"/>
                                             </xsl:call-template>
                                         </xsl:when>
                                         <xsl:otherwise>
@@ -75,7 +96,9 @@ See the accompanying LICENSE file for applicable license.
                                             <xsl:if test="not(@scope = 'external')">
                                                 <xsl:value-of select="$pathFromMaplist"/>
                                             </xsl:if>
-                                            <xsl:value-of select="@href"/>
+                                            <xsl:call-template name="fix-href">
+                                                <xsl:with-param name="href" select="@href"/>
+                                            </xsl:call-template>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:attribute>
