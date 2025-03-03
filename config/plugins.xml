@@ -641,7 +641,7 @@ public IDs and system IDs for any DTD modules included in this plugin. -->
   <feature extension="ant.import" file="build_fop.xml"/>
   <template file="xsl/fo/topic2fo_shell_fop_template.xsl"/>
 </plugin><plugin id="sv.dita.pdf2-nio-user-manual" version="0.0.0" xml:base="../plugins/sv.dita.pdf2-nio-user-manual/plugin.xml">
-    <require plugin="org.dita.pdf2"/>
+    <require plugin="org.dita.pdf2.fop"/>
     <feature extension="dita.conductor.transtype.check" value="pdf2-nio-user-manual"/>
     <feature extension="dita.transtype.print" value="pdf2-nio-user-manual"/>
     <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
@@ -650,6 +650,7 @@ public IDs and system IDs for any DTD modules included in this plugin. -->
     <!-- Register the watermark -->
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/watermark.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/image.xsl"/>
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/custom.xsl"/>
 </plugin><plugin id="org.dita.htmlhelp" version="4.2.4" xml:base="../plugins/org.dita.htmlhelp/plugin.xml">
   <!-- extension points -->
   <extension-point id="dita.xsl.htmlhelp.map2hhp" name="HTML Help project XSLT import"/>
