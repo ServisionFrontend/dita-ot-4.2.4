@@ -18,9 +18,6 @@
     <xsl:key name="jobFile" match="file" use="@uri"/>
     <!-- 重写图片处理模板 -->
     <xsl:template match="*[contains(@class,' topic/image ')]">
-        <xsl:message>
-            <xsl:text>Debug - Image: </xsl:text>
-        </xsl:message>
         <fo:block xsl:use-attribute-sets="image__block" 
                   padding="2pt"
                   text-align="center">

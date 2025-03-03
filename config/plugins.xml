@@ -651,6 +651,8 @@ public IDs and system IDs for any DTD modules included in this plugin. -->
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/watermark.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/image.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/custom.xsl"/>
+    <!-- Register the custom cover -->
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-cover.xsl"/>
 </plugin><plugin id="org.dita.htmlhelp" version="4.2.4" xml:base="../plugins/org.dita.htmlhelp/plugin.xml">
   <!-- extension points -->
   <extension-point id="dita.xsl.htmlhelp.map2hhp" name="HTML Help project XSLT import"/>
