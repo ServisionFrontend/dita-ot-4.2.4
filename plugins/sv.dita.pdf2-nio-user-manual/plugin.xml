@@ -10,6 +10,8 @@
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/watermark.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/image.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/custom.xsl"/>
+    <!-- Register the custom TOC attributes -->
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/toc-attr.xsl"/>
     <!-- Register the custom cover -->
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-cover.xsl"/>
 </plugin>
