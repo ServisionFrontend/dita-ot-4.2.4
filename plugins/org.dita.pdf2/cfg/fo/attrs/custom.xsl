@@ -37,9 +37,11 @@ See the accompanying LICENSE file for applicable license.
     <xsl:variable name="tocMaximumLevel" select="6"/>
     <!-- Custom styles for TOC entries at different levels -->
     <xsl:attribute-set name="__toc__topic__content">
-        <xsl:attribute name="last-line-end-indent">-22pt</xsl:attribute>
-        <xsl:attribute name="end-indent">22pt</xsl:attribute>
-        <xsl:attribute name="text-indent" select="concat('-', $toc.text-indent)"/>
+        <xsl:attribute name="margin-left">
+            <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
+            <xsl:value-of select="concat(string(($level - 1) * 15), 'px')"/>
+        </xsl:attribute>
+        <xsl:attribute name="margin-right">10px</xsl:attribute>
         <xsl:attribute name="text-align">start</xsl:attribute>
         <xsl:attribute name="text-align-last">justify</xsl:attribute>
         <xsl:attribute name="font-size">
@@ -65,11 +67,22 @@ See the accompanying LICENSE file for applicable license.
             </xsl:choose>
         </xsl:attribute>
     </xsl:attribute-set>
-    <!-- Adjust indentation for deeper levels -->
+    <!-- Remove the complex indentation settings -->
     <xsl:attribute-set name="__toc__indent">
-        <xsl:attribute name="start-indent">
-            <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
-            <xsl:value-of select="concat($side-col-width, ' + (', string($level - 1), ' * ', $toc.toc-indent, ') + ', $toc.text-indent)"/>
-        </xsl:attribute>
+        <xsl:attribute name="margin-left">0px</xsl:attribute>
+        <xsl:attribute name="margin-right">0px</xsl:attribute>
+    </xsl:attribute-set>
+    <!-- Override the region body margins for TOC pages -->
+    <xsl:attribute-set name="region-body.odd">
+        <xsl:attribute name="margin-top">20px</xsl:attribute>
+        <xsl:attribute name="margin-bottom">20px</xsl:attribute>
+        <xsl:attribute name="margin-left">20px</xsl:attribute>
+        <xsl:attribute name="margin-right">20px</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="region-body.even">
+        <xsl:attribute name="margin-top">20px</xsl:attribute>
+        <xsl:attribute name="margin-bottom">20px</xsl:attribute>
+        <xsl:attribute name="margin-left">20px</xsl:attribute>
+        <xsl:attribute name="margin-right">20px</xsl:attribute>
     </xsl:attribute-set>
 </xsl:stylesheet>
