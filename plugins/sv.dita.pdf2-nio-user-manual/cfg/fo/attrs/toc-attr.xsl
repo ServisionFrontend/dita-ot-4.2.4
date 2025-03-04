@@ -2,11 +2,6 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="2.0">
-    <!-- 设置目录容器为双栏布局 -->
-    <xsl:attribute-set name="__toc__container">
-        <xsl:attribute name="column-count">2</xsl:attribute>
-        <xsl:attribute name="column-gap">1cm</xsl:attribute>
-    </xsl:attribute-set>
     <!-- 设置目录标题样式 -->
     <xsl:attribute-set name="__toc__header">
         <xsl:attribute name="text-align">center</xsl:attribute>
@@ -16,8 +11,11 @@
     </xsl:attribute-set>
     <!-- 覆盖默认的目录标题模板 -->
     <xsl:template name="createTocHeader">
-        <fo:block xsl:use-attribute-sets="__toc__header" span="all">
-            <xsl:text>目录</xsl:text>
+        <fo:block xsl:use-attribute-sets="__toc__header" id="{$id.toc}" span="all">
+            <xsl:apply-templates select="." mode="customTopicAnchor"/>
+            <xsl:call-template name="getVariable">
+                <xsl:with-param name="id" select="'Index'"/>
+            </xsl:call-template>
         </fo:block>
     </xsl:template>
 </xsl:stylesheet>
