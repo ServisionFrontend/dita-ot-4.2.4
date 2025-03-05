@@ -44,6 +44,9 @@ See the accompanying LICENSE file for applicable license.
         <xsl:attribute name="margin-right">10px</xsl:attribute>
         <xsl:attribute name="text-align">start</xsl:attribute>
         <xsl:attribute name="text-align-last">justify</xsl:attribute>
+        <xsl:attribute name="overflow">hidden</xsl:attribute>
+        <xsl:attribute name="text-overflow">ellipsis</xsl:attribute>
+        <xsl:attribute name="white-space">nowrap</xsl:attribute>
         <xsl:attribute name="font-size">
             <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
             <xsl:choose>
@@ -66,6 +69,17 @@ See the accompanying LICENSE file for applicable license.
                 <xsl:otherwise>normal</xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
+    </xsl:attribute-set>
+    <!-- Override the TOC link properties to limit width -->
+    <xsl:attribute-set name="__toc__link">
+        <xsl:attribute name="line-height">150%</xsl:attribute>
+        <xsl:attribute name="width">70%</xsl:attribute>
+    </xsl:attribute-set>
+    <!-- Customize the title portion of TOC to enable truncation -->
+    <xsl:attribute-set name="__toc__title">
+        <xsl:attribute name="end-indent" select="'14pt'"/>
+        <xsl:attribute name="keep-together.within-line">always</xsl:attribute>
+        <xsl:attribute name="wrap-option">no-wrap</xsl:attribute>
     </xsl:attribute-set>
     <!-- Remove the complex indentation settings -->
     <xsl:attribute-set name="__toc__indent">
