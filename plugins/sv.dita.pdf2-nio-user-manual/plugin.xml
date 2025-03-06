@@ -11,4 +11,5 @@
     <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/toc-attr.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-cover.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-toc.xsl"/>
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-layout-masters.xsl"/>
 </plugin>

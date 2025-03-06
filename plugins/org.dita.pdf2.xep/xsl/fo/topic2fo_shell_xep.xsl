@@ -15,7 +15,7 @@ See the accompanying LICENSE file for applicable license.
   <xsl:import href="plugin:org.dita.pdf2.xep:xsl/fo/index_xep.xsl"/>
   <xsl:import href="plugin:org.dita.pdf2.xep:xsl/fo/topic_xep.xsl"/>
 
-  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:org.lwdita:xsl/linebreak2fo.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/watermark.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/image.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/attrs/custom.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/attrs/toc-attr.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/custom-cover.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/custom-toc.xsl"/>
+  <xsl:import xmlns:dita="http://dita-ot.sourceforge.net" href="plugin:org.lwdita:xsl/linebreak2fo.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/watermark.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/image.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/attrs/custom.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/attrs/toc-attr.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/custom-cover.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/custom-toc.xsl"/><xsl:import href="plugin:sv.dita.pdf2-nio-user-manual:cfg/fo/xsl/custom-layout-masters.xsl"/>
 
   <xsl:import href="cfg:fo/attrs/custom.xsl"/>
   <xsl:import href="cfg:fo/xsl/custom.xsl"/>
