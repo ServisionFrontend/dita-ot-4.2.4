@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
 <plugin id="sv.dita.pdf2-nio-user-manual">
     <require plugin="org.dita.pdf2.fop"/>
     <feature extension="dita.conductor.transtype.check" value="pdf2-nio-user-manual"/>
@@ -7,9 +7,9 @@
     <feature extension="dita.conductor.pdf2.param" file="params.xml"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/watermark.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/image.xsl"/>
-    <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/custom.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/toc-attr.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-cover.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-toc.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-layout-masters.xsl"/>
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/page-header.xsl"/>
 </plugin>
