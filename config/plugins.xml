@@ -649,6 +649,7 @@ public IDs and system IDs for any DTD modules included in this plugin. -->
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/watermark.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/image.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/toc-attr.xsl"/>
+    <feature extension="dita.xsl.xslfo" file="cfg/fo/attrs/custom.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-cover.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-toc.xsl"/>
     <feature extension="dita.xsl.xslfo" file="cfg/fo/xsl/custom-layout-masters.xsl"/>
