@@ -20,35 +20,35 @@
     </xsl:attribute-set>
     <!-- 覆盖前言奇数页边距设置 -->
     <xsl:attribute-set name="region-body__frontmatter.odd">
-        <xsl:attribute name="margin-top">45pt</xsl:attribute>
+        <xsl:attribute name="margin-top">25pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
         <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
     </xsl:attribute-set>
     <!-- 覆盖前言偶数页边距设置 -->
     <xsl:attribute-set name="region-body__frontmatter.even">
-        <xsl:attribute name="margin-top">45pt</xsl:attribute>
+        <xsl:attribute name="margin-top">25pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
         <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
     </xsl:attribute-set>
     <!-- 覆盖目录奇数页边距设置 -->
     <xsl:attribute-set name="region-body__toc.odd">
-        <xsl:attribute name="margin-top">45pt</xsl:attribute>
+        <xsl:attribute name="margin-top">25pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
         <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
     </xsl:attribute-set>
     <!-- 覆盖目录偶数页边距设置 -->
     <xsl:attribute-set name="region-body__toc.even">
-        <xsl:attribute name="margin-top">45pt</xsl:attribute>
+        <xsl:attribute name="margin-top">25pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
         <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
     </xsl:attribute-set>
     <!-- 覆盖索引奇数页边距设置 -->
     <xsl:attribute-set name="region-body__index.odd">
-        <xsl:attribute name="margin-top">45pt</xsl:attribute>
+        <xsl:attribute name="margin-top">25pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
         <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
@@ -56,7 +56,7 @@
     </xsl:attribute-set>
     <!-- 覆盖索引偶数页边距设置 -->
     <xsl:attribute-set name="region-body__index.even">
-        <xsl:attribute name="margin-top">45pt</xsl:attribute>
+        <xsl:attribute name="margin-top">25pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
         <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
@@ -110,5 +110,10 @@
         <xsl:attribute name="padding-top">5pt</xsl:attribute>
         <xsl:attribute name="padding-bottom">5pt</xsl:attribute>
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+    </xsl:attribute-set>
+    <!-- 增加页眉区域高度设置 -->
+    <xsl:attribute-set name="region-before">
+        <xsl:attribute name="extent">85pt</xsl:attribute>
+        <xsl:attribute name="display-align">before</xsl:attribute>
     </xsl:attribute-set>
 </xsl:stylesheet>

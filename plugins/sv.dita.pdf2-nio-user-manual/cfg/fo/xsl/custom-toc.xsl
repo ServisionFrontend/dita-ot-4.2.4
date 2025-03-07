@@ -15,7 +15,6 @@
         <xsl:attribute name="text-align">start</xsl:attribute>
         <xsl:attribute name="text-align-last">justify</xsl:attribute>
         <xsl:attribute name="overflow">hidden</xsl:attribute>
-        <xsl:attribute name="text-overflow">ellipsis</xsl:attribute>
         <xsl:attribute name="white-space">nowrap</xsl:attribute>
         <xsl:attribute name="font-size">
             <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
