@@ -151,12 +151,26 @@
             </xsl:choose>
         </fo:table-column>
     </xsl:template>
-    <!-- 处理表格单元格内容，使用零宽空格来辅助换行 -->
+    <!-- 处理表格单元格内容，在逗号和下划线后添加换行机会 -->
     <xsl:template match="*[contains(@class, ' topic/entry ')]//text()">
-        <xsl:analyze-string select="." regex="([^,]+),">
+        <!-- 首先处理逗号分隔 -->
+        <xsl:variable name="after-comma">
+            <xsl:analyze-string select="." regex="([^,]+),">
+                <xsl:matching-substring>
+                    <xsl:value-of select="regex-group(1)"/>
+                    <xsl:text>,</xsl:text>
+                    <xsl:text>&#x200B;</xsl:text>
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                    <xsl:value-of select="."/>
+                </xsl:non-matching-substring>
+            </xsl:analyze-string>
+        </xsl:variable>
+        <!-- 然后处理下划线分隔 -->
+        <xsl:analyze-string select="$after-comma" regex="([^_]+)_">
             <xsl:matching-substring>
                 <xsl:value-of select="regex-group(1)"/>
-                <xsl:text>,</xsl:text>
+                <xsl:text>_</xsl:text>
                 <xsl:text>&#x200B;</xsl:text>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
