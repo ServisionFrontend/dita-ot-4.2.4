@@ -68,6 +68,7 @@
         <xsl:attribute name="border-collapse">collapse</xsl:attribute>
         <xsl:attribute name="width">100%</xsl:attribute>
         <xsl:attribute name="border">1pt solid black</xsl:attribute>
+        <xsl:attribute name="table-layout">fixed</xsl:attribute>
     </xsl:attribute-set>
     <!-- 表格边框样式 -->
     <xsl:attribute-set name="table.tgroup">
@@ -79,6 +80,10 @@
     <xsl:attribute-set name="tbody.row.entry">
         <xsl:attribute name="border">1pt solid black</xsl:attribute>
         <xsl:attribute name="padding">5pt</xsl:attribute>
+        <xsl:attribute name="wrap-option">wrap</xsl:attribute>
+        <xsl:attribute name="hyphenate">false</xsl:attribute>
+        <xsl:attribute name="white-space">normal</xsl:attribute>
+        <xsl:attribute name="line-height">1.2</xsl:attribute>
     </xsl:attribute-set>
     <!-- 表头单元格样式 -->
     <xsl:attribute-set name="thead.row.entry">
@@ -86,11 +91,19 @@
         <xsl:attribute name="padding">5pt</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="background-color">#f0f0f0</xsl:attribute>
+        <xsl:attribute name="wrap-option">wrap</xsl:attribute>
+        <xsl:attribute name="hyphenate">false</xsl:attribute>
+        <xsl:attribute name="white-space">normal</xsl:attribute>
+        <xsl:attribute name="line-height">1.2</xsl:attribute>
     </xsl:attribute-set>
     <!-- CALS表格单元格样式 -->
     <xsl:attribute-set name="entry">
         <xsl:attribute name="border">1pt solid black</xsl:attribute>
         <xsl:attribute name="padding">5pt</xsl:attribute>
+        <xsl:attribute name="wrap-option">wrap</xsl:attribute>
+        <xsl:attribute name="hyphenate">false</xsl:attribute>
+        <xsl:attribute name="white-space">normal</xsl:attribute>
+        <xsl:attribute name="line-height">1.2</xsl:attribute>
     </xsl:attribute-set>
     <!-- 表格框架样式 -->
     <xsl:attribute-set name="table__tableframe">
@@ -116,4 +129,39 @@
         <xsl:attribute name="extent">85pt</xsl:attribute>
         <xsl:attribute name="display-align">before</xsl:attribute>
     </xsl:attribute-set>
+    <!-- 添加列宽控制 -->
+    <xsl:template match="*[contains(@class, ' topic/colspec ')]">
+        <fo:table-column>
+            <xsl:choose>
+                <xsl:when test="@colwidth">
+                    <xsl:attribute name="column-width">
+                        <xsl:choose>
+                            <xsl:when test="contains(@colwidth, '*')">
+                                <xsl:value-of select="concat('proportional-column-width(', substring-before(@colwidth, '*'), ')')"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="@colwidth"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:attribute>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="column-width">proportional-column-width(1)</xsl:attribute>
+                </xsl:otherwise>
+            </xsl:choose>
+        </fo:table-column>
+    </xsl:template>
+    <!-- 处理表格单元格内容，使用零宽空格来辅助换行 -->
+    <xsl:template match="*[contains(@class, ' topic/entry ')]//text()">
+        <xsl:analyze-string select="." regex="([^,]+),">
+            <xsl:matching-substring>
+                <xsl:value-of select="regex-group(1)"/>
+                <xsl:text>,</xsl:text>
+                <xsl:text>&#x200B;</xsl:text>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
 </xsl:stylesheet>
