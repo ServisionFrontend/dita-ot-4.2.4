@@ -41,8 +41,8 @@
                      margin-left="41.25pt" 
                      margin-right="41.25pt">
                 <fo:table width="100%" border-collapse="separate" display-align="after">
-                    <fo:table-column column-width="50%"/>
-                    <fo:table-column column-width="50%"/>
+                    <fo:table-column column-width="80%"/>
+                    <fo:table-column column-width="20%"/>
                     <fo:table-body>
                         <fo:table-row height="45px" display-align="after">
                             <!-- 左侧：一级目录标题，垂直居下 -->

@@ -19,7 +19,6 @@
     <!-- 重写图片处理模板 -->
     <xsl:template match="*[contains(@class,' topic/image ')]">
         <fo:block xsl:use-attribute-sets="image__block" 
-                  padding="2pt"
                   text-align="center">
             <fo:external-graphic src="url({key('jobFile', @href, $job)/@src})"
                 content-width="scale-to-fit"

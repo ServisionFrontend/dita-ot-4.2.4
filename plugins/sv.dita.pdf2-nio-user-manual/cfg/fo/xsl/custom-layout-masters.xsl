@@ -8,14 +8,14 @@
     <xsl:attribute-set name="region-body.odd">
         <xsl:attribute name="margin-top">65pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
-        <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
+        <xsl:attribute name="margin-left">17pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
     </xsl:attribute-set>
     <!-- 覆盖偶数页边距设置 -->
     <xsl:attribute-set name="region-body.even">
         <xsl:attribute name="margin-top">65pt</xsl:attribute>
         <xsl:attribute name="margin-bottom">45pt</xsl:attribute>
-        <xsl:attribute name="margin-left">41.25pt</xsl:attribute>
+        <xsl:attribute name="margin-left">17pt</xsl:attribute>
         <xsl:attribute name="margin-right">41.25pt</xsl:attribute>
     </xsl:attribute-set>
     <!-- 覆盖前言奇数页边距设置 -->
