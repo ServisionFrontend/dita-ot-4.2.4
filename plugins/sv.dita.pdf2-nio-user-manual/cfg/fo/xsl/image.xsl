@@ -18,13 +18,12 @@
     <xsl:key name="jobFile" match="file" use="@uri"/>
     <!-- 重写图片处理模板 -->
     <xsl:template match="*[contains(@class,' topic/image ')]">
-        <fo:block xsl:use-attribute-sets="image__block" 
-                  text-align="center">
+        <fo:block xsl:use-attribute-sets="image__block">
             <fo:external-graphic src="url({key('jobFile', @href, $job)/@src})"
+                inline-progression-dimension="100%"
                 content-width="scale-to-fit"
                 content-height="scale-to-fit"
-                width="auto"
-                max-width="100%"
+                width="100%"
                 scaling="uniform">
                 <xsl:if test="@scale">
                     <xsl:attribute name="content-width">

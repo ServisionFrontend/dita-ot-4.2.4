@@ -33,8 +33,9 @@
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="image__block">
-        <xsl:attribute name="border">1pt solid red</xsl:attribute>
-        <xsl:attribute name="padding">0pt</xsl:attribute>
-        <xsl:attribute name="margin">0pt</xsl:attribute>
+        <xsl:attribute name="margin">0</xsl:attribute>
+        <xsl:attribute name="start-indent">25pt</xsl:attribute>
+        <xsl:attribute name="end-indent">0pt</xsl:attribute>
+        <xsl:attribute name="text-align">start</xsl:attribute>
     </xsl:attribute-set>
 </xsl:stylesheet>
