@@ -68,4 +68,12 @@
         <xsl:attribute name="margin-left">20px</xsl:attribute>
         <xsl:attribute name="margin-right">20px</xsl:attribute>
     </xsl:attribute-set>
+    <!-- 添加目录页水印 -->
+    <xsl:template name="createTocStaticContent">
+        <fo:static-content flow-name="xsl-region-body">
+            <fo:block-container absolute-position="absolute" top="0cm" left="0cm" width="25cm" height="29.7cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}" z-index="999">
+                <fo:block/>
+            </fo:block-container>
+        </fo:static-content>
+    </xsl:template>
 </xsl:stylesheet>

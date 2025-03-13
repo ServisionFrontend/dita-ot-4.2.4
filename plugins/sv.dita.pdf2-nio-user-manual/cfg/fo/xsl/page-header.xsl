@@ -70,6 +70,30 @@
                               color="black"/>
                 </fo:block>
             </fo:block>
+            <!-- 添加水印 -->
+            <fo:block-container absolute-position="absolute" top="0cm" left="0cm" width="25cm" height="29.7cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}"  z-index="999" >
+                <fo:block/>
+            </fo:block-container>
+            <fo:block xsl:use-attribute-sets="__body__odd__header">
+                <xsl:call-template name="getVariable">
+                    <xsl:with-param name="id" select="'Body odd header'"/>
+                    <xsl:with-param name="params">
+                        <prodname>
+                            <xsl:value-of select="$productName"/>
+                        </prodname>
+                        <heading>
+                            <fo:inline xsl:use-attribute-sets="__body__odd__header__heading">
+                                <fo:retrieve-marker retrieve-class-name="current-header"/>
+                            </fo:inline>
+                        </heading>
+                        <pagenum>
+                            <fo:inline xsl:use-attribute-sets="__body__odd__header__pagenum">
+                                <fo:page-number/>
+                            </fo:inline>
+                        </pagenum>
+                    </xsl:with-param>
+                </xsl:call-template>
+            </fo:block>
         </fo:static-content>
     </xsl:template>
     <!-- 重用相同的模板用于偶数页 -->

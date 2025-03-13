@@ -20,6 +20,10 @@
                                height="217mm"
                                scaling="uniform"/>
                     </fo:block>
+                    <!-- 添加水印 -->
+                    <fo:block-container absolute-position="absolute" top="0cm" left="0cm" width="25cm" height="29.7cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}" z-index="999">
+                        <fo:block/>
+                    </fo:block-container>
                     <!-- 添加标题文字 - 使用绝对定位 -->
                     <fo:block-container absolute-position="absolute"
                                       top="80mm"
