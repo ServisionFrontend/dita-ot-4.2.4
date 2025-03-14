@@ -3,6 +3,7 @@
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:fox="http://www.w3.org/1999/XSL/Format"
                 version="2.0">
     <!-- 导入基础模板 -->
     <xsl:import href="plugin:org.dita.pdf2:xsl/fo/topic.xsl"/>
@@ -18,13 +19,15 @@
     <xsl:key name="jobFile" match="file" use="@uri"/>
     <!-- 重写图片处理模板 -->
     <xsl:template match="*[contains(@class,' topic/image ')]">
-        <fo:block xsl:use-attribute-sets="image__block">
+        <fo:block xsl:use-attribute-sets="image__block" margin-left="0" padding-left="0" start-indent="0pt" text-align="center">
             <fo:external-graphic src="url({key('jobFile', @href, $job)/@src})"
-                inline-progression-dimension="100%"
                 content-width="scale-to-fit"
                 content-height="scale-to-fit"
-                width="100%"
-                scaling="uniform">
+                scaling="uniform"
+                fox:alt-text=""
+                width="auto"
+                height="auto"
+                max-height="22cm">
                 <xsl:if test="@scale">
                     <xsl:attribute name="content-width">
                         <xsl:value-of select="concat(@scale, '%')"/>
