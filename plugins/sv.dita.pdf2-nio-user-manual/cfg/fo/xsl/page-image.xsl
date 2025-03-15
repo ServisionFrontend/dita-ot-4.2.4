@@ -19,8 +19,23 @@
     <xsl:key name="jobFile" match="file" use="@uri"/>
     <!-- 重写图片处理模板 -->
     <xsl:template match="*[contains(@class,' topic/image ')]">
+        <xsl:variable name="image-path" select="substring-after(@href, '../')"/>
+        <xsl:variable name="image-url" select="key('jobFile', @href, $job)/@src"/>
         <fo:block xsl:use-attribute-sets="image__block" margin-left="0" padding-left="0" start-indent="0pt" text-align="center">
-            <fo:external-graphic src="url({key('jobFile', @href, $job)/@src})"
+            <xsl:message>
+                ===== Image Information =====
+                Image URL:
+                <xsl:value-of select="$image-url"/>
+                Intrinsic Size:
+                width:
+                <xsl:value-of select="document($image-url)/*/@width"/>
+                height:
+                <xsl:value-of select="document($image-url)/*/@height"/>
+                viewBox:
+                <xsl:value-of select="document($image-url)/*/@viewBox"/>
+                ===========================
+            </xsl:message>
+            <fo:external-graphic src="url({$image-url})"
                 content-width="scale-to-fit"
                 content-height="scale-to-fit"
                 scaling="uniform"
