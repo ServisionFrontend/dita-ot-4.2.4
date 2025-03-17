@@ -4,12 +4,13 @@
                 version="2.0">
     <!-- 覆盖默认的封面模板 -->
     <xsl:template name="createFrontMatter">
-        <fo:page-sequence master-reference="front-matter" format="i" force-page-count="no-force">
-            <fo:flow flow-name="xsl-region-body">
+        <fo:page-sequence master-reference="front-matter" format="i" force-page-count="no-force" margin="0" padding="0">
+            <fo:flow flow-name="xsl-region-body" margin="0" padding="0">
                 <!-- 创建一个居中的容器 -->
                 <fo:block text-align="center"                          
                          height="297mm"
-                         margin="0mm"
+                         margin="0"
+                         padding="0"
                          position="relative">
                     <!-- 添加封面图片 -->
                     <fo:block>
@@ -21,7 +22,7 @@
                                scaling="uniform"/>
                     </fo:block>
                     <!-- 添加水印 -->
-                    <fo:block-container absolute-position="absolute" top="0cm" left="0cm" width="25cm" height="29.7cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}" z-index="999">
+                    <fo:block-container absolute-position="absolute" top="-2cm" left="-1.5cm" width="32cm" height="33cm" background-image="{concat('file:/',$artwork.dir, '/watermark.png')}" z-index="999">
                         <fo:block/>
                     </fo:block-container>
                     <!-- 添加标题文字 - 使用绝对定位 -->
