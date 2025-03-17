@@ -26,7 +26,6 @@
                 content-width="scale-to-fit"
                 content-height="scale-to-fit"
                 scaling="uniform"
-                fox:alt-text=""
                 width="auto"
                 height="auto"
                 max-height="22cm">
