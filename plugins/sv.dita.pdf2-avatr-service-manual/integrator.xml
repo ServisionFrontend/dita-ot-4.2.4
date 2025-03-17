@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sv.dita.pdf2-avatr-service-manual">
+    <target name="dita2pdf2-avatr-service-manual"
+            depends="dita2pdf2">
+    </target>
+</project>
