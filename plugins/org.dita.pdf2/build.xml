@@ -302,9 +302,6 @@ with those set forth herein.
     <param name="plugin.dir.pdf2-avatr-service-manual" expression="${dita.plugin.sv.dita.pdf2-avatr-service-manual.dir}"/>
     <param name="artwork.dir" expression="${dita.plugin.sv.dita.pdf2-avatr-service-manual.dir}/cfg/fo/artwork"/>
 
-    <param name="plugin.dir.pdf2-nio-user-manual" expression="${dita.plugin.sv.dita.pdf2-nio-user-manual.dir}"/>
-    <param name="artwork.dir" expression="${dita.plugin.sv.dita.pdf2-nio-user-manual.dir}/cfg/fo/artwork"/>
-
       <xmlcatalog refid="xml.catalog"/>
     </xslt>
     </pipeline>
